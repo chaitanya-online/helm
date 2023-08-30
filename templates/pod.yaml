@@ -9,6 +9,6 @@ metadata:
 spec:
   containers:
     - name: {{ .Values.pod.name }}
-      image: richeb/apachetest:{{ .Values.image.tag}}}
+      image: richeb/apachetest:{{ .Values.image.tag }}
       ports:
         - containerPort: 80
