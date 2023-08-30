@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: {{ .Values.pod.name }}
+  labels:
+    labels:
+    name: apache
+    tier: frontend
+spec:
+  containers:
+    - name: {{ .Values.pod.name }}
+      image: richeb/apachetest:v1
+      ports:
+        - containerPort: 80
