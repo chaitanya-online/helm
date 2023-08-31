@@ -25,3 +25,25 @@ spec:
   selector:
     name: apache
     tier: frontend
+
+---
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: apache-limit-range
+spec:
+  limits:
+    - type: Container
+      default:
+        cpu: {{ .Values.limitRange.cpuDefault | default "100m" }}
+      defaultRequest:
+        cpu: {{ .Values.limitRange.cpuDefault | default "100m" }}
+      max:
+        cpu: {{ .Values.limitRange.cpuMax | default "500m" }}
+      min:
+        cpu: {{ .Values.limitRange.cpuMin | default "100m" }}
+
+
+
+
+

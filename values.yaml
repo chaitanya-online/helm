@@ -15,3 +15,7 @@ pod:
   labels:
     name: apache
     tier: frontend
+
+limitRange:
+  cpuMin: 100m
+  cpuMax: 500m    
