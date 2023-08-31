@@ -17,5 +17,6 @@ pod:
     tier: frontend
 
 limitRange:
+  name: apache-limit-range
   cpuMin: 100m
   cpuMax: 500m    
